@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--配置User对象的创建-->
-    <bean id="user" class="com.example.spring5_demo.User"></bean>
+    <bean id="user" class="com.example.spring5_demo.User">
+        <!--set注入属性 property-->
+        <property name="name" value="用户"></property>
+    </bean>
+
+    <!--    <bean id="user" class="com.example.spring5_demo.User" p:name="name"></bean>-->
+
+    <bean id="order" class="com.example.spring5_demo.Order">
+        <constructor-arg name="id" value="1"></constructor-arg>
+        <!-- 设置空值        -->
+        <constructor-arg name="name">
+            <null/>
+        </constructor-arg>
+        <constructor-arg name="address">
+            <!--属性值包括特殊符号
+            1. 把 <> 转义
+            2. 写入CDATA结构-->
+            <value>
+                <![CDATA[<<上海>>]]>
+            </value>
+        </constructor-arg>
+    </bean>
+
 
 </beans>
