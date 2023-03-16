@@ -1,6 +1,6 @@
-package com.example.spring5_demo.Service;
+package com.example.spring5_IOC.Service;
 
-import com.example.spring5_demo.Dao.UserDao;
+import com.example.spring5_IOC.Dao.UserDao;
 
 /**
  * @BelongsProject: spring5_demo

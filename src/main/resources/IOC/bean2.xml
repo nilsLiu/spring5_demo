@@ -4,16 +4,16 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- 1. service和dao对象创建   -->
-    <bean id="userService" class="com.example.spring5_demo.Service.UserService">
+    <bean id="userService" class="com.example.spring5_IOC.Service.UserService">
         <!-- 注入 userDao对象
         name:类里面属性的名称
         ref: 创建的userDao对象bean标签的id值-->
         <property name="userDao" ref="userDao"></property>
         <property name="userDao.userName" value="aaa"></property>
 <!--        <property name="userDao">-->
-<!--            <bean id="userDao" class="com.example.spring5_demo.Dao.UserDaoImpl">-->
+<!--            <bean id="userDao" class="com.example.spring5_IOC.Dao.UserDaoImpl">-->
 <!--            </bean>-->
 <!--        </property>-->
     </bean>
-    <bean id="userDao" class="com.example.spring5_demo.Dao.UserDaoImpl"></bean>
+    <bean id="userDao" class="com.example.spring5_IOC.Dao.UserDaoImpl"></bean>
 </beans>

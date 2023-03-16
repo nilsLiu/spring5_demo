@@ -5,14 +5,14 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--配置User对象的创建-->
-    <bean id="user" class="com.example.spring5_demo.User">
+    <bean id="user" class="com.example.spring5_IOC.User">
         <!--set注入属性 property-->
         <property name="name" value="用户"></property>
     </bean>
 
-    <!--    <bean id="user" class="com.example.spring5_demo.User" p:name="name"></bean>-->
+    <!--    <bean id="user" class="com.example.spring5_IOC.User" p:name="name"></bean>-->
 
-    <bean id="order" class="com.example.spring5_demo.Order">
+    <bean id="order" class="com.example.spring5_IOC.Order">
         <constructor-arg name="id" value="1"></constructor-arg>
         <!-- 设置空值        -->
         <constructor-arg name="name">

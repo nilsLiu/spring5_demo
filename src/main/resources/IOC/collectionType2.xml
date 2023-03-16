@@ -13,7 +13,7 @@
     </util:list>
 
     <!--2.提取list集合类型属性注入使用-->
-    <bean id="book" class="com.example.spring5_demo.collectionType.Book">
+    <bean id="book" class="com.example.spring5_IOC.collectionType.Book" scope="prototype">
         <property name="bookList" ref="bookList"/>
     </bean>
 </beans>

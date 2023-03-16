@@ -1,4 +1,4 @@
-package com.example.spring5_demo.collectionType;
+package com.example.spring5_IOC.collectionType;
 
 import java.util.List;
 

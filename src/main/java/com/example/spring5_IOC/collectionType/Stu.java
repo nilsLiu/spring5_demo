@@ -1,6 +1,4 @@
-package com.example.spring5_demo.collectionType;
-
-import org.junit.Test;
+package com.example.spring5_IOC.collectionType;
 
 import java.util.Arrays;
 import java.util.List;

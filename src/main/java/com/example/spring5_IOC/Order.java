@@ -1,4 +1,4 @@
-package com.example.spring5_demo;
+package com.example.spring5_IOC;
 
 /**
  * @BelongsProject: spring5_demo

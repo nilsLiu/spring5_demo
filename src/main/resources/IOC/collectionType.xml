@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--集合类型对象创建-->
-    <bean id="stu" class="com.example.spring5_demo.collectionType.Stu">
+    <bean id="stu" class="com.example.spring5_IOC.collectionType.Stu">
         <!--数组类型属性注入-->
         <property name="courses">
             <array>
@@ -51,13 +51,13 @@
     </bean>
 
     <!--创建多个course对象-->
-    <bean id="course1" class="com.example.spring5_demo.collectionType.Course">
+    <bean id="course1" class="com.example.spring5_IOC.collectionType.Course">
         <property name="courseName" value="语文"/>
     </bean>
-    <bean id="course2" class="com.example.spring5_demo.collectionType.Course">
+    <bean id="course2" class="com.example.spring5_IOC.collectionType.Course">
         <property name="courseName" value="英语"/>
     </bean>
-    <bean id="course3" class="com.example.spring5_demo.collectionType.Course">
+    <bean id="course3" class="com.example.spring5_IOC.collectionType.Course">
         <property name="courseName" value="数学"/>
     </bean>
 

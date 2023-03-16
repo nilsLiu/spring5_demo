@@ -1,4 +1,4 @@
-package com.example.spring5_demo.collectionType;
+package com.example.spring5_IOC.collectionType;
 
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -14,7 +14,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class collectionTypeTest {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("collectionType.xml");
+                new ClassPathXmlApplicationContext("IOC/collectionType.xml");
         Stu stu = context.getBean("stu", Stu.class);
 
         stu.test();
@@ -24,7 +24,7 @@ public class collectionTypeTest {
     @Test
     public void testBook(){
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("collectionType2.xml");
+                new ClassPathXmlApplicationContext("IOC/collectionType2.xml");
         Book book = context.getBean("book", Book.class);
 
         book.test();
