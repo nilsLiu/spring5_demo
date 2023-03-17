@@ -7,5 +7,6 @@ package com.example.spring5_IOC.BeanAnnotation;
  * @CreateTime: 2023-03-16  21:28
  * @Version: 1.0
  */
-public class AUserDao {
+public interface AUserDao {
+    void add();
 }

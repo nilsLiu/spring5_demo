@@ -1,6 +1,9 @@
 package com.example.spring5_IOC.BeanAnnotation;
 
+import com.example.spring5_IOC.BeanAnnotation.Config.SpringConfig;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -16,6 +19,14 @@ public class BeanAnnotationTest {
     public void testAUserService(){
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("IOC/BeanAnnotation.xml");
+        AUserService aUserService = context.getBean("aUserService", AUserService.class);
+        aUserService.test();
+    }
+
+    @Test
+    public void testConfig() {
+        ApplicationContext context =
+                new AnnotationConfigApplicationContext(SpringConfig.class);
         AUserService aUserService = context.getBean("aUserService", AUserService.class);
         aUserService.test();
     }
