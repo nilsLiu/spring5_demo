@@ -1,8 +1,9 @@
-package com.example.tx.service;
+package com.example.tx.xml.service;
 
-import com.example.tx.dao.UserDao;
+import com.example.tx.anno.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @BelongsProject: spring5_demo
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
+//@Transactional(timeout = -1)
 public class UserService {
 
     //注入dao
@@ -21,7 +23,7 @@ public class UserService {
 
     //转账的方法
     public void accountMoney() {
-        try {
+//        try {
             //1.开启事务
 
             //2.进行业务操作
@@ -32,9 +34,9 @@ public class UserService {
             userDao.addMoney();
 
             //3.无异常。提交事务
-        }catch (Exception e){
+//        }catch (Exception e){
             //4.出现异常，事务回滚
-        }
+//        }
 
     }
 }

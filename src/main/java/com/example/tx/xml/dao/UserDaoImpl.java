@@ -1,5 +1,6 @@
-package com.example.tx.dao;
+package com.example.tx.xml.dao;
 
+import com.example.tx.anno.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;

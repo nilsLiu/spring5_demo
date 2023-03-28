@@ -1,9 +1,8 @@
-package com.example.tx.test;
+package com.example.tx.anno.test;
 
-import com.example.tx.service.UserService;
+import com.example.tx.anno.service.User1Service;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.transaction.PlatformTransactionManager;
 
 /**
  * @BelongsProject: spring5_demo
@@ -19,8 +18,8 @@ public class testTx {
     public void testAccount() {
 
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("tx/tx_Bean.xml");
-        UserService userService = context.getBean("userService", UserService.class);
+                new ClassPathXmlApplicationContext("tx/tx_anno.xml");
+        User1Service userService = context.getBean("userService", User1Service.class);
         userService.accountMoney();
     }
 }

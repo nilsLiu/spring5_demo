@@ -1,4 +1,4 @@
-package com.example.tx.dao;
+package com.example.tx.anno_abs.dao;
 
 /**
  * @BelongsProject: spring5_demo
